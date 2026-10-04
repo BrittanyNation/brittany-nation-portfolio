@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brittany Nation — Front-End Developer building clean, responsive web apps with HTML, CSS, JavaScript, Tailwind CSS, and React." />
+  <title>Brittany Nation | Front-End Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488'
+            },
+            ink: {
+              950: '#020617',
+              900: '#0f172a',
+              800: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-ink-950 text-slate-100 font-sans antialiased">
+
+  <!-- Skip link for keyboard users -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-accent-400 focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded-md">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-ink-950/85 backdrop-blur border-b border-slate-800">
+    <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
+      <a href="#home" class="text-xl font-bold tracking-tight">Brittany<span class="text-accent-400">.</span>Nation</a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <li><a href="#about" class="nav-link hover:text-accent-400 transition-colors">About</a></li>
+        <li><a href="#skills" class="nav-link hover:text-accent-400 transition-colors">Skills</a></li>
+        <li><a href="#projects" class="nav-link hover:text-accent-400 transition-colors">Projects</a></li>
+        <li><a href="#contact" class="px-4 py-2 rounded-md bg-accent-500 hover:bg-accent-400 text-ink-950 font-semibold transition-colors">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-ink-800 focus:outline-none focus:ring-2 focus:ring-accent-400" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-ink-950">
+      <ul class="px-6 py-4 space-y-3 text-sm font-medium text-slate-300">
+        <li><a href="#about" class="mobile-link block py-1 hover:text-accent-400">About</a></li>
+        <li><a href="#skills" class="mobile-link block py-1 hover:text-accent-400">Skills</a></li>
+        <li><a href="#projects" class="mobile-link block py-1 hover:text-accent-400">Projects</a></li>
+        <li><a href="#contact" class="mobile-link block py-1 text-accent-400 font-semibold">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="max-w-5xl mx-auto px-6 pt-24 pb-16 w-full">
+        <p class="reveal text-accent-400 font-medium tracking-wide mb-4">Hello, I'm</p>
+        <h1 class="reveal text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Brittany Nation</h1>
+        <h2 class="reveal text-2xl md:text-3xl font-semibold text-slate-300 mb-6">Front-End Developer</h2>
+        <p class="reveal max-w-2xl text-lg text-slate-400 mb-10">I build clean, responsive web apps with modern JavaScript — turning ideas into fast, accessible interfaces people enjoy using.</p>
+        <div class="reveal flex flex-wrap gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-md bg-accent-500 hover:bg-accent-400 text-ink-950 font-semibold transition-colors">View Projects</a>
+          <a href="#contact" class="px-6 py-3 rounded-md border border-slate-600 hover:border-accent-400 hover:text-accent-400 font-semibold transition-colors">Contact Me</a>
+        </div>
+        <div class="reveal mt-12 flex items-center gap-4 text-slate-400">
+          <a href="https://github.com/BrittanyNation" target="_blank" rel="noopener noreferrer" aria-label="Brittany Nation on GitHub" class="hover:text-accent-400 transition-colors">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/brittany-nation/" target="_blank" rel="noopener noreferrer" aria-label="Brittany Nation on LinkedIn" class="hover:text-accent-400 transition-colors">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-ink-900/40">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="reveal text-3xl md:text-4xl font-bold mb-2">About <span class="text-accent-400">Me</span></h2>
+        <div class="reveal w-16 h-1 bg-accent-500 rounded mb-10" aria-hidden="true"></div>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="md:col-span-2 space-y-5 text-slate-300 leading-relaxed">
+            <p class="reveal">I'm a front-end developer transitioning into web development after 4+ years in remote operations and client support. That background made me detail-oriented and systems-minded — skills I now bring to building clean, maintainable interfaces.</p>
+            <p class="reveal">I work with HTML, CSS, JavaScript, and React, and I'm comfortable collaborating async across time zones. I'm currently deepening my skills with hands-on projects while working remotely.</p>
+            <p class="reveal text-slate-400 text-sm">I also run a small bookkeeping practice (Deva Gana LLC) as current freelance work.</p>
+          </div>
+          <aside class="reveal bg-ink-800 border border-slate-700 rounded-lg p-6 h-fit" aria-label="Quick facts">
+            <h3 class="font-semibold text-lg mb-4">Quick facts</h3>
+            <dl class="space-y-3 text-sm">
+              <div class="flex justify-between gap-4"><dt class="text-slate-400">Location</dt><dd class="text-right">Remote (US)</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-slate-400">Focus</dt><dd class="text-right">Front-End Development</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-slate-400">Learning</dt><dd class="text-right">React, TypeScript</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-slate-400">Open to</dt><dd class="text-right">Remote roles</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="reveal text-3xl md:text-4xl font-bold mb-2">Skills</h2>
+        <div class="reveal w-16 h-1 bg-accent-500 rounded mb-10" aria-hidden="true"></div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="reveal bg-ink-800 border border-slate-700 rounded-lg p-6">
+            <h3 class="font-semibold text-accent-400 mb-4">Languages</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li class="skill-pill">HTML5</li>
+              <li class="skill-pill">CSS3</li>
+              <li class="skill-pill">JavaScript (ES6+)</li>
+              <li class="skill-pill">Python</li>
+            </ul>
+          </div>
+          <div class="reveal bg-ink-800 border border-slate-700 rounded-lg p-6">
+            <h3 class="font-semibold text-accent-400 mb-4">Frameworks &amp; Tools</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li class="skill-pill">Tailwind CSS</li>
+              <li class="skill-pill">React</li>
+              <li class="skill-pill">Git / GitHub</li>
+              <li class="skill-pill">REST APIs</li>
+            </ul>
+          </div>
+          <div class="reveal bg-ink-800 border border-slate-700 rounded-lg p-6">
+            <h3 class="font-semibold text-accent-400 mb-4">Practices</h3>
+            <ul class="flex flex-wrap gap-2">
+              <li class="skill-pill">Responsive Design</li>
+              <li class="skill-pill">Accessible Markup</li>
+              <li class="skill-pill">Remote Collaboration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 bg-ink-900/40">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="reveal text-3xl md:text-4xl font-bold mb-2">Projects</h2>
+        <div class="reveal w-16 h-1 bg-accent-500 rounded mb-4" aria-hidden="true"></div>
+        <p class="reveal text-slate-400 mb-10">A selection of things I've built — all open source on GitHub.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">BudgetBloom</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Budget tracking dashboard built with React — track income, expenses, and savings goals in one clean interface.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">React</span><span class="tech-tag">JavaScript</span><span class="tech-tag">CSS</span></div>
+            <a href="https://github.com/BrittanyNation/budgetbloom" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">Deva Gana HTML Email Suite</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Production-ready responsive HTML email templates (welcome, newsletter, promo) built for a real small business.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Responsive Email</span></div>
+            <a href="https://github.com/BrittanyNation/deva-gana-html-email-suite" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">DevOps Monitor Dashboard</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Real-time DevOps deployment and microservices monitor dashboard with a polished dark UI.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">JavaScript</span><span class="tech-tag">Dashboard UI</span><span class="tech-tag">CSS</span></div>
+            <a href="https://github.com/BrittanyNation/devops-monitor-dashboard" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">E-Commerce Website</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Full storefront mockup with product listings, cart UI, and responsive layouts across devices.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+            <a href="https://github.com/BrittanyNation/Ecommerce-website" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">BMI Calculator</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Interactive BMI calculator with instant results, input validation, and a clean, friendly interface.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span></div>
+            <a href="https://github.com/BrittanyNation/BMI-Calculator" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">Drawing App</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Canvas-based drawing app with brush size and color controls — a fun exercise in the HTML5 Canvas API.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">JavaScript</span><span class="tech-tag">Canvas API</span></div>
+            <a href="https://github.com/BrittanyNation/drawing-app" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">Drag &amp; Drop</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Interactive drag-and-drop list built with the native HTML5 drag-and-drop API and smooth visual feedback.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML5 API</span></div>
+            <a href="https://github.com/BrittanyNation/drag-n-drop" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">Animated Countdown</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Stylish animated countdown timer with rotating number transitions and replay controls.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">CSS Animations</span><span class="tech-tag">JavaScript</span></div>
+            <a href="https://github.com/BrittanyNation/animated-countdown" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="reveal project-card">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-semibold text-lg">Background Slider</h3>
+              <span class="badge">Code</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4">Full-screen background image slider with arrow navigation and smooth crossfade transitions.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+            <a href="https://github.com/BrittanyNation/background-slider" target="_blank" rel="noopener noreferrer" class="project-link">View code <span aria-hidden="true">→</span></a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="reveal text-3xl md:text-4xl font-bold mb-2">Get in <span class="text-accent-400">Touch</span></h2>
+        <div class="reveal w-16 h-1 bg-accent-500 rounded mb-8 mx-auto" aria-hidden="true"></div>
+        <p class="reveal text-slate-400 mb-10">I'm open to remote front-end roles and freelance projects. The fastest way to reach me is email — I usually reply within a day.</p>
+        <div class="reveal flex flex-wrap justify-center gap-4">
+          <a href="mailto:brittanynation07@gmail.com" class="px-6 py-3 rounded-md bg-accent-500 hover:bg-accent-400 text-ink-950 font-semibold transition-colors">Email Me</a>
+          <a href="https://github.com/BrittanyNation" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-md border border-slate-600 hover:border-accent-400 hover:text-accent-400 font-semibold transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/brittany-nation/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-md border border-slate-600 hover:border-accent-400 hover:text-accent-400 font-semibold transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>© <span id="year">2026</span> Brittany Nation. All rights reserved.</p>
+      <p>Built with HTML, Tailwind CSS &amp; vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
